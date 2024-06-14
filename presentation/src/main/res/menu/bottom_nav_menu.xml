@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_qr"
+        android:icon="@drawable/ic_example"
+        android:title="qr" />
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_example"
+        android:title="home" />
+    <item
+        android:id="@+id/navigation_storage"
+        android:icon="@drawable/ic_example"
+        android:title="storage" />
+</menu>

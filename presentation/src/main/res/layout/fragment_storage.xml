@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="12dp"
+    tools:context=".ui.storage.StorageFragment">
+
+    <com.example.clipy.utils.ClearEditText
+        android:id="@+id/cet_search_storage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="이름, 회사"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_category_storage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="카테고리"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/cet_search_storage"
+        app:layout_constraintTop_toBottomOf="@+id/cet_search_storage" />
+
+    <Spinner
+        android:id="@+id/spinner_category_storage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_category_storage"
+        app:layout_constraintStart_toEndOf="@+id/tv_category_storage"
+        app:layout_constraintTop_toTopOf="@+id/tv_category_storage" />
+
+    <TextView
+        android:id="@+id/tv_edit_storage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="편집"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/spinner_category_storage"
+        app:layout_constraintEnd_toEndOf="@+id/cet_search_storage"
+        app:layout_constraintTop_toTopOf="@+id/spinner_category_storage" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_list_storage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingTop="8dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_category_storage"
+        tools:listitem="@layout/item_business_card_storage" />
+</androidx.constraintlayout.widget.ConstraintLayout>

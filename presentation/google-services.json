@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "489206202038",
+    "project_id": "clipy-dc2e4",
+    "storage_bucket": "clipy-dc2e4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:489206202038:android:1d1e9baf9083c13a6cb017",
+        "android_client_info": {
+          "package_name": "com.example.clipy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAs5Ib57_tOU-ou3kHlbtCLlvbOk0T9zDA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
