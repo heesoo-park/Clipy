@@ -27,7 +27,7 @@ class ClearEditText(
     }
 
     private fun init() {
-        val tempDrawable = ContextCompat.getDrawable(context, R.drawable.ic_example)
+        val tempDrawable = ContextCompat.getDrawable(context, R.drawable.ic_delete)
         clearDrawable = DrawableCompat.wrap(tempDrawable!!)
         DrawableCompat.setTintList(clearDrawable!!, hintTextColors)
         clearDrawable!!.setBounds(0, 0, clearDrawable!!.intrinsicWidth, clearDrawable!!.intrinsicHeight)

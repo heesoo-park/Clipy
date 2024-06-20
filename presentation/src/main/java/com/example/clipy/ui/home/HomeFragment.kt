@@ -1,19 +1,24 @@
 package com.example.clipy.ui.home
 
+import android.content.SharedPreferences
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import com.example.clipy.base.MainViewModel
 import com.example.clipy.databinding.FragmentHomeBinding
+import com.example.clipy.di.AppModule
 import com.example.clipy.item.HomeItem
 import com.example.clipy.ui.login.LoginFragment
 import com.google.zxing.BarcodeFormat
 import com.journeyapps.barcodescanner.BarcodeEncoder
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
@@ -25,9 +30,13 @@ class HomeFragment : Fragment() {
         ImagePagerAdapter(
             moveCreatePage = {
                 try {
-                    val dialog = LoginFragment.newInstance()
-                    dialog.show(requireActivity().supportFragmentManager, "Login")
-//                    makeQRCode()
+                    if (mainViewModel.loginState) {
+                        Toast.makeText(requireContext(), "명함 만들기 페이지로 이동", Toast.LENGTH_SHORT).show()
+//                        makeQRCode()
+                    } else {
+                        val dialog = LoginFragment.newInstance()
+                        dialog.show(requireActivity().supportFragmentManager, "Login")
+                    }
                 } catch (e: Exception) {
                     Toast.makeText(requireContext(), "QR 코드 생성 오류", Toast.LENGTH_SHORT).show()
                 }
