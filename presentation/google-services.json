@@ -7,12 +7,25 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:489206202038:android:1d1e9baf9083c13a6cb017",
+        "mobilesdk_app_id": "1:489206202038:android:d77a86744e9cdad36cb017",
         "android_client_info": {
-          "package_name": "com.example.clipy"
+          "package_name": "com.peacepark.clipy"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "489206202038-fcviant96e9e62307460upesgmj8i8m2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.peacepark.clipy",
+            "certificate_hash": "edc9f2b3c732f7d45777dce264a6257ae0b26351"
+          }
+        },
+        {
+          "client_id": "489206202038-9mi8h2c4mtnb6cqclhiqd60nfneck8l0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyAs5Ib57_tOU-ou3kHlbtCLlvbOk0T9zDA"
@@ -20,7 +33,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "489206202038-9mi8h2c4mtnb6cqclhiqd60nfneck8l0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

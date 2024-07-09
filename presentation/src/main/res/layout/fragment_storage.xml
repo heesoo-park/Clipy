@@ -7,7 +7,7 @@
     android:paddingHorizontal="12dp"
     tools:context=".ui.storage.StorageFragment">
 
-    <com.example.clipy.utils.ClearEditText
+    <com.peacepark.clipy.utils.ClearEditText
         android:id="@+id/cet_search_storage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

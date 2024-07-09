@@ -7,11 +7,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.clipy"
+    namespace = "com.peacepark.clipy"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.clipy"
+        applicationId = "com.peacepark.clipy"
         minSdk = 28
         targetSdk = 34
         versionCode = 1
@@ -58,7 +58,7 @@ dependencies {
     debugImplementation("com.squareup.leakcanary:leakcanary-android:2.13")
 
     implementation("androidx.activity:activity-ktx:1.9.0")
-    implementation("androidx.fragment:fragment-ktx:1.8.0")
+    implementation("androidx.fragment:fragment-ktx:1.8.1")
 
     implementation("androidx.viewpager:viewpager:1.0.0")
 
@@ -69,9 +69,18 @@ dependencies {
 
     implementation("me.relex:circleindicator:2.1.6")
 
-    implementation(platform("com.google.firebase:firebase-bom:33.1.0"))
+    implementation(platform("com.google.firebase:firebase-bom:33.1.1"))
     implementation("com.google.firebase:firebase-auth:23.0.0")
+    implementation("com.google.firebase:firebase-storage:21.0.0")
+
+    implementation("com.google.gms:google-services:4.4.2")
+    implementation("com.google.android.gms:play-services-auth:21.2.0")
 
     implementation("com.google.dagger:hilt-android:2.50")
     kapt("com.google.dagger:hilt-compiler:2.50")
+
+    implementation("androidx.room:room-runtime:2.6.1")
+    implementation("androidx.room:room-paging:2.6.1")
+    implementation("androidx.paging:paging-runtime-ktx:3.3.0")
+    kapt("androidx.room:room-compiler:2.6.1")
 }

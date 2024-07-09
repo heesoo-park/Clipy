@@ -1,9 +1,9 @@
 package com.peacepark.domain.usecase
 
-import com.google.firebase.auth.FirebaseUser
 import com.peacepark.domain.repository.AuthRepository
+import javax.inject.Inject
 
-class CheckLoginState(
+class CheckLoginState @Inject constructor(
     private val authRepository: AuthRepository
 ) {
     operator fun invoke(): Boolean = authRepository.isLogin()

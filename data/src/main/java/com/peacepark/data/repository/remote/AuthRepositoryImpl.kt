@@ -1,7 +1,11 @@
 package com.peacepark.data.repository.remote
 
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.android.play.integrity.internal.al
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.GoogleAuthProvider
 import com.peacepark.data.DataNullException
 import com.peacepark.domain.repository.AuthRepository
 import kotlinx.coroutines.tasks.await
@@ -23,6 +27,16 @@ class AuthRepositoryImpl(
             } else {
                 Result.failure(DataNullException())
             }
+        } catch (e: Exception) {
+            Result.failure(e)
+        }
+    }
+
+    override suspend fun googleLogin(account: GoogleSignInAccount?): Result<Boolean> {
+        return try {
+            val credential = GoogleAuthProvider.getCredential(account?.idToken, null)
+            auth.signInWithCredential(credential).await()
+            Result.success(true)
         } catch (e: Exception) {
             Result.failure(e)
         }

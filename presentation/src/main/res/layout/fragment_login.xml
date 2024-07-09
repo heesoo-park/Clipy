@@ -225,6 +225,8 @@
         android:background="@drawable/background_social_login_btn"
         android:backgroundTint="#FEE712"
         android:src="@drawable/background_icon_kakao"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_with_google_login"
         app:layout_constraintEnd_toStartOf="@+id/btn_with_google_login"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
@@ -238,6 +240,7 @@
         android:background="@drawable/background_social_login_btn"
         android:backgroundTint="#03C75A"
         android:src="@drawable/background_icon_naver"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/btn_with_google_login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -249,11 +252,12 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/background_social_login_btn"
         android:backgroundTint="#F4F4F4"
         android:src="@drawable/background_icon_google"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_with_kakao_login"
         app:layout_constraintEnd_toStartOf="@+id/btn_with_naver_login"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btn_with_kakao_login" />
+        app:layout_constraintStart_toEndOf="@+id/btn_with_kakao_login"
+        app:layout_constraintTop_toBottomOf="@+id/cl_line_login" />
 </androidx.constraintlayout.widget.ConstraintLayout>
